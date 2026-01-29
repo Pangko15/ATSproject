@@ -1,0 +1,252 @@
+
+:root{
+    --bg: #f4f6f9;
+    --card: #ffffff;
+    --border: #e6e9ef;
+    --text: #111827;
+    --muted: #6b7280;
+
+    --primary: #111827;
+    --primary-hover: #0b1220;
+
+    --danger: #ef4444;
+    --danger-bg: #fff1f2;
+
+    --shadow-sm: 0 1px 2px rgba(16,24,40,.06);
+    --shadow-md: 0 6px 16px rgba(16,24,40,.10);
+
+    --r-lg: 16px;
+    --r-md: 12px;
+    --r-sm: 10px;
+
+    --pad-lg: 20px;
+    --pad-md: 14px;
+    --pad-sm: 10px;
+
+    --fs-title: 34px;
+    --fs-h2: 18px;
+    --fs-base: 14px;
+}
+
+/* 기본 */
+.ui-page {
+    background: var(--bg);
+    min-height: 100vh;
+    color: var(--text);
+}
+
+.ui-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 카드 */
+.ui-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.ui-cardHeader {
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--border);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap: 10px;
+}
+
+.ui-cardTitle {
+    font-weight: 900;
+    font-size: var(--fs-h2);
+}
+
+.ui-cardMeta {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.ui-cardBody { padding: 18px; }
+
+/* 페이지 헤더 */
+.ui-pageHeader {
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.ui-title {
+    font-size: var(--fs-title);
+    font-weight: 1000;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+.ui-subtitle {
+    margin-top: 6px;
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.ui-actions { display:flex; gap: 10px; align-items:center; }
+
+/* 버튼 */
+.ui-btn {
+    border-radius: 12px;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    background: #fff;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.ui-btn:disabled { opacity: .55; cursor: not-allowed; }
+
+.ui-btnPrimary {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+.ui-btnPrimary:hover { background: var(--primary-hover); }
+
+.ui-btnGhost { background: #fff; }
+.ui-btnDanger {
+    background: #fff;
+    border-color: #fecaca;
+    color: #b91c1c;
+}
+
+/* 입력 */
+.ui-label {
+    font-weight: 900;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+.ui-input, .ui-textarea, .ui-select {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 14px;
+    outline: none;
+    font-size: 14px;
+    background: #fff;
+}
+.ui-textarea { resize: vertical; min-height: 120px; }
+
+.ui-help {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* 그리드 */
+.ui-grid2 {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 14px;
+}
+
+.ui-card { min-width: 0; }
+.ui-cardBody { min-width: 0; }
+.ui-container { width: 100%; min-width: 0; }
+@media (max-width: 980px){
+    .ui-grid2 { grid-template-columns: 1fr; }
+}
+
+/* 토스트 */
+.ui-toast {
+    border-radius: 14px;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    background: #fff;
+    box-shadow: var(--shadow-sm);
+    font-weight: 800;
+}
+.ui-toastOk { border-color: #bbf7d0; background: #f0fdf4; color: #166534; }
+.ui-toastErr { border-color: #fecaca; background: var(--danger-bg); color: #991b1b; }
+
+.tableWrap{
+    border:1px solid var(--border);
+    border-radius:16px;
+    overflow:hidden;
+    background:#fff;
+}
+.table{
+    width:100%;
+    border-collapse:collapse;
+}
+.table th, .table td{
+    padding:14px 14px;
+    border-bottom:1px solid var(--border);
+    text-align:left;
+    font-size:14px;
+}
+.table th{
+    color: var(--muted);
+    font-size:12px;
+    font-weight:900;
+    background:#fafafa;
+}
+.table tr:hover td{ background:#fafafa; }
+.rowLink{ cursor:pointer; }
+.muted{ color: var(--muted); font-size:13px; }
+.ui-form { padding: 18px; }
+.ui-field { margin-bottom: 14px; }
+
+.ui-inline {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ui-empty {
+    padding: 18px;
+    color: var(--muted);
+    font-weight: 700;
+}
+
+.ui-mono {
+    font-variant-numeric: tabular-nums;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+.ui-metaLine {
+    margin-top: 8px;
+    color: #9ca3af;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* file block */
+.ui-fileList { padding: 18px; }
+.ui-fileRow {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: #fff;
+}
+.ui-fileLabel { font-weight: 900; }
+.ui-fileValue { display: flex; flex-direction: column; gap: 6px; }
+
+.ui-link { color: #2563eb; font-weight: 900; text-decoration: none; }
+.ui-link:hover { text-decoration: underline; }
+
+.ui-rowSub { color: #374151; font-size: 13px; font-weight: 600; }
+.ui-rowSubMuted { color: #9ca3af; font-weight: 700; }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { width: 100%; overflow-x: hidden; }
+img, video { max-width: 100%; height: auto; }
