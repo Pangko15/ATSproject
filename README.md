@@ -27,7 +27,8 @@
 
 ## 3. 💾 ERD 설계 및 핵심 구조 (Database Modeling)
 
-![ERD Structure Placeholder](https://via.placeholder.com/800x400?text=Insert+ERD+Image+Here)
+![ERD Structure Placeholder](https://via.placeholder.com/800x400?text=Insert+ERD+Image+Here)<img width="780" height="1236" alt="스크린샷 2026-01-30 171542" src="https://github.com/user-attachments/assets/82221527-b668-4045-89df-becabb60189c" />
+
 
 ### 3-1. 동적 이력서 구조 (Dynamic Schema)
 * **Resume (1) ↔ Block (N) ↔ Value (N)**
